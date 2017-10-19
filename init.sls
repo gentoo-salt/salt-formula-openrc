@@ -15,7 +15,7 @@ package-openrc:
 uncomment-{{ option }}:
   file.uncomment:
     - name: {{ rc_file }}
-    - regex: {{ option }}
+    - regex: {{ option }}=
 
 set-{{ option }}:
   augeas.change:
