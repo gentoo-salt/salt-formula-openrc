@@ -5,6 +5,11 @@
 include:
   - augeas
 
+package-openrc:
+  pkg.installed:
+    - name: sys-apps/openrc 
+    - version: latest
+
 {% for item in [{'rc_parallel':'YES','rc_interactive':'YES','rc_depend_strict':'NO','rc_logger':'YES','rc_log_path':'/var/log/rc.log','unicode':'YES'}] %}
 {% for option, value in item.iteritems() %}
 uncomment-{{ option }}:
